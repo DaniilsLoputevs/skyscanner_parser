@@ -12,5 +12,6 @@ class SkyParserServiceImp : SkyParserService {
 
     override fun parseHttpResponse(data: SkyServiceResponse): List<BotResponse> {
         data.carriers.forEach { carrierMap.put(it.carrierId, it) }
+        return listOf()
     }
 }

@@ -18,13 +18,13 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 data class Quotes (
 
     @JsonProperty("QuoteId")
-    val quoteId : Int?,
+    val quoteId : Int,
     @JsonProperty("MinPrice")
-    val minPrice : Int?,
+    val minPrice : Int,
     @JsonProperty("Direct")
-    val direct : Boolean?,
+    val direct : Boolean,
     @JsonProperty("OutboundLeg")
-    val outboundLeg : OutboundLeg?,
+    val outboundLeg : OutboundLeg,
     @JsonProperty("QuoteDateTime")
-    val quoteDateTime : String?
+    val quoteDateTime : String
 )

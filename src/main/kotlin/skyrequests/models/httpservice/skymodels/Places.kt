@@ -18,19 +18,19 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 data class Places (
 
 	@JsonProperty("Name")
-	val name : String?,
+	val name : String,
 	@JsonProperty("Type")
-	val type : String?,
+	val type : String,
 	@JsonProperty("PlaceId")
-	val placeId : Int?,
+	val placeId : Int,
 	@JsonProperty("IataCode")
-	val iataCode : String?,
+	val iataCode : String,
 	@JsonProperty("SkyscannerCode")
-	val skyscannerCode : String?,
+	val skyscannerCode : String,
 	@JsonProperty("CityName")
-	val cityName : String?,
+	val cityName : String,
 	@JsonProperty("CityId")
-	val cityId : String?,
+	val cityId : String,
 	@JsonProperty("CountryName")
-	val countryName : String?
+	val countryName : String
 )

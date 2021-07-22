@@ -18,7 +18,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 data class Carriers (
 
 	@JsonProperty("CarrierId")
-	val carrierId : Int?,
+	val carrierId : Int,
 	@JsonProperty("Name")
-	val name : String?
+	val name : String
 )

@@ -18,13 +18,13 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 data class Routes (
 
 	@JsonProperty("Price")
-	val price : Int?,
+	val price : Int,
 	@JsonProperty("QuoteDateTime")
-	val quoteDateTime : String?,
+	val quoteDateTime : String,
 	@JsonProperty("OriginId")
-	val originId : Int?,
+	val originId : Int,
 	@JsonProperty("DestinationId")
-	val destinationId : Int?,
+	val destinationId : Int,
 	@JsonProperty("QuoteIds")
-	val quoteIds : List<Int>?
+	val quoteIds : List<Int>
 )

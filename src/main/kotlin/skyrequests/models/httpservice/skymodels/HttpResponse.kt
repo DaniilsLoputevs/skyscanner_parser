@@ -18,13 +18,13 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 data class HttpResponse (
 
     @JsonProperty("Quotes")
-    val quotes : List<Quotes>?,
+    val quotes : List<Quotes>,
     @JsonProperty("Carriers")
-    val carriers : List<Carriers>?,
+    val carriers : List<Carriers>,
     @JsonProperty("Places")
-    val places : List<Places>?,
+    val places : List<Places>,
     @JsonProperty("Currencies")
-    val currencies : List<Currencies>?,
+    val currencies : List<Currencies>,
     @JsonProperty("Routes")
-    val routes : List<Routes>?
+    val routes : List<Routes>
 )

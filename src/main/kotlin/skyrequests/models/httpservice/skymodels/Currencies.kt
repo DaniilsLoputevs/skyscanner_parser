@@ -18,19 +18,19 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 data class Currencies (
 
 	@JsonProperty("Code")
-	val code : String?,
+	val code : String,
 	@JsonProperty("Symbol")
-	val symbol : String?,
+	val symbol : String,
 	@JsonProperty("ThousandsSeparator")
-	val thousandsSeparator : String?,
+	val thousandsSeparator : String,
 	@JsonProperty("DecimalSeparator")
-	val decimalSeparator : String?,
+	val decimalSeparator : String,
 	@JsonProperty("SymbolOnLeft")
-	val symbolOnLeft : Boolean?,
+	val symbolOnLeft : Boolean,
 	@JsonProperty("SpaceBetweenAmountAndSymbol")
-	val spaceBetweenAmountAndSymbol : Boolean?,
+	val spaceBetweenAmountAndSymbol : Boolean,
 	@JsonProperty("RoundingCoefficient")
-	val roundingCoefficient : Int?,
+	val roundingCoefficient : Int,
 	@JsonProperty("DecimalDigits")
-	val decimalDigits : Int?
+	val decimalDigits : Int
 )

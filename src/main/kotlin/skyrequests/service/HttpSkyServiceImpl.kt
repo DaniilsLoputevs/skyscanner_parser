@@ -14,8 +14,8 @@ const val SKYURI = "http://partners.api.skyscanner.net/apiservices/browseroutes/
 
 class HttpSkyServiceImpl: HttpSkyService {
 
-    val client = HttpClient.newBuilder().build()
-    val jackson = JsonMapper.builder()
+    private val client = HttpClient.newBuilder().build()
+    private val jackson = JsonMapper.builder()
         .addModule(KotlinModule(strictNullChecks = false))
         .build()
 
@@ -30,4 +30,10 @@ class HttpSkyServiceImpl: HttpSkyService {
             .readValue(client.send(request, HttpResponse.BodyHandlers.ofString()).body())
     }
 }
+
+//fun main() {
+//    val request = SkyServiceRequest("2021-08-15", "VKO", "KKR")
+//    val service = HttpSkyServiceImpl()
+//    val response = service.findFlyInfo(request)
+//}
 

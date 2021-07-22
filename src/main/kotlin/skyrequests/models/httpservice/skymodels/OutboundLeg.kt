@@ -18,12 +18,12 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 data class OutboundLeg (
 
 	@JsonProperty("CarrierIds")
-	val carrierIds : List<Int>?,
+	val carrierIds : List<Int>,
 	@JsonProperty("OriginId")
-	val originId : Int?,
+	val originId : Int,
 	@JsonProperty("DestinationId")
-	val destinationId : Int?,
+	val destinationId : Int,
 	@JsonProperty("DepartureDate")
-	val departureDate : String?
+	val departureDate : String
 
 )
