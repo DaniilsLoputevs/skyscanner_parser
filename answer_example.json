@@ -1,0 +1,193 @@
+{
+  "Quotes": [
+    {
+      "QuoteId": 1,
+      "MinPrice": 17858,
+      "Direct": false,
+      "OutboundLeg": {
+        "CarrierIds": [
+          1285
+        ],
+        "OriginId": 63874,
+        "DestinationId": 65698,
+        "DepartureDate": "2021-08-09T00:00:00"
+      },
+      "QuoteDateTime": "2021-07-21T16:15:00"
+    },
+    {
+      "QuoteId": 2,
+      "MinPrice": 18567,
+      "Direct": false,
+      "OutboundLeg": {
+        "CarrierIds": [
+          1717
+        ],
+        "OriginId": 63874,
+        "DestinationId": 65698,
+        "DepartureDate": "2021-08-01T00:00:00"
+      },
+      "QuoteDateTime": "2021-07-21T18:19:00"
+    },
+    {
+      "QuoteId": 3,
+      "MinPrice": 18567,
+      "Direct": false,
+      "OutboundLeg": {
+        "CarrierIds": [
+          1717
+        ],
+        "OriginId": 63874,
+        "DestinationId": 65698,
+        "DepartureDate": "2021-08-08T00:00:00"
+      },
+      "QuoteDateTime": "2021-07-21T19:40:00"
+    },
+    {
+      "QuoteId": 4,
+      "MinPrice": 18575,
+      "Direct": false,
+      "OutboundLeg": {
+        "CarrierIds": [
+          1717
+        ],
+        "OriginId": 63874,
+        "DestinationId": 65698,
+        "DepartureDate": "2021-08-05T00:00:00"
+      },
+      "QuoteDateTime": "2021-07-19T18:13:00"
+    },
+    {
+      "QuoteId": 5,
+      "MinPrice": 18710,
+      "Direct": false,
+      "OutboundLeg": {
+        "CarrierIds": [
+          1717
+        ],
+        "OriginId": 63874,
+        "DestinationId": 65698,
+        "DepartureDate": "2021-08-07T00:00:00"
+      },
+      "QuoteDateTime": "2021-07-19T04:12:00"
+    },
+    {
+      "QuoteId": 6,
+      "MinPrice": 19905,
+      "Direct": false,
+      "OutboundLeg": {
+        "CarrierIds": [
+          1717
+        ],
+        "OriginId": 63874,
+        "DestinationId": 65698,
+        "DepartureDate": "2021-08-06T00:00:00"
+      },
+      "QuoteDateTime": "2021-07-20T19:16:00"
+    },
+    {
+      "QuoteId": 7,
+      "MinPrice": 29068,
+      "Direct": false,
+      "OutboundLeg": {
+        "CarrierIds": [
+          1717
+        ],
+        "OriginId": 63874,
+        "DestinationId": 65698,
+        "DepartureDate": "2021-08-21T00:00:00"
+      },
+      "QuoteDateTime": "2021-07-20T14:06:00"
+    },
+    {
+      "QuoteId": 8,
+      "MinPrice": 36843,
+      "Direct": false,
+      "OutboundLeg": {
+        "CarrierIds": [
+          1717
+        ],
+        "OriginId": 63874,
+        "DestinationId": 65698,
+        "DepartureDate": "2021-08-15T00:00:00"
+      },
+      "QuoteDateTime": "2021-07-19T20:06:00"
+    },
+    {
+      "QuoteId": 9,
+      "MinPrice": 45487,
+      "Direct": false,
+      "OutboundLeg": {
+        "CarrierIds": [
+          1285
+        ],
+        "OriginId": 63874,
+        "DestinationId": 65698,
+        "DepartureDate": "2021-08-16T00:00:00"
+      },
+      "QuoteDateTime": "2021-07-21T17:22:00"
+    }
+  ],
+  "Carriers": [
+    {
+      "CarrierId": 1285,
+      "Name": "Air Serbia"
+    },
+    {
+      "CarrierId": 1717,
+      "Name": "Aeroflot"
+    }
+  ],
+  "Places": [
+    {
+      "Name": "Краснодар",
+      "Type": "Station",
+      "PlaceId": 63874,
+      "IataCode": "KRR",
+      "SkyscannerCode": "KRR",
+      "CityName": "Краснодар",
+      "CityId": "KRAT",
+      "CountryName": "Россия"
+    },
+    {
+      "Name": "Лондон Хитроу",
+      "Type": "Station",
+      "PlaceId": 65698,
+      "IataCode": "LHR",
+      "SkyscannerCode": "LHR",
+      "CityName": "Лондон",
+      "CityId": "LOND",
+      "CountryName": "Великобритания"
+    }
+  ],
+  "Currencies": [
+    {
+      "Code": "RUB",
+      "Symbol": "₽",
+      "ThousandsSeparator": " ",
+      "DecimalSeparator": ",",
+      "SymbolOnLeft": false,
+      "SpaceBetweenAmountAndSymbol": true,
+      "RoundingCoefficient": 0,
+      "DecimalDigits": 2
+    }
+  ],
+  "Routes": [
+    {
+      "Price": 17858,
+      "QuoteDateTime": "2021-07-21T16:15:00",
+      "OriginId": 63874,
+      "DestinationId": 65698,
+      "QuoteIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  ]
+}
