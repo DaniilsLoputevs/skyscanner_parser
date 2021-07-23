@@ -31,9 +31,3 @@ class HttpSkyServiceImpl: HttpSkyService {
     }
 }
 
-//fun main() {
-//    val request = SkyServiceRequest("2021-08-15", "VKO", "KKR")
-//    val service = HttpSkyServiceImpl()
-//    val response = service.findFlyInfo(request)
-//}
-
