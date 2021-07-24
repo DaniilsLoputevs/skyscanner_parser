@@ -21,17 +21,24 @@ class SkyParserServiceImp : SkyParserService {
             carriers.forEach { carrierMap[it.carrierId] = it }
             places.forEach { placeMap[it.placeId] = it }
             return routes
-                .filter { quotesMap.containsKey(it) && quotesMap[it]?.direct ?: false}
-                .map { rout ->
+                .flatMap {
+                    it.quoteIds.map { qu -> Pair(it,qu) }
+                }
+                .filter { quotesMap[it.second] != null }
+                .map { pair ->
                     BotResponse(
-                        makeDate(rout.quoteDateTime),
-                        placeMap[rout.originId].let { it?.cityName ?: "Error city from name" },
-                        placeMap[rout.destinationId].let { it?.cityName ?: "Error city to name" },
-                        quotesMap[rout.quoteIds].let { it?.outboundLeg?.departureDate ?: "None"},
+                        makeDate(pair.first.quoteDateTime),
+                        placeMap[pair.first.originId].let { it?.cityName ?: "Error city from name" },
+                        placeMap[pair.first.destinationId].let { it?.cityName ?: "Error city to name" },
+                        quotesMap[pair.second].let { it?.outboundLeg?.departureDate ?: "None"},
                         "None",
-                        carrierMap[quotesMap[rout.originId]?.quoteId]?.name ?: "none",
-                        rout.price.toDouble()
+                        quotesMap[pair.second]?.outboundLeg?.carrierIds?.fold("")
+                        { total, it -> total + carrierMap[it]?.name + ", "} ?: "None",
+                        pair.first.price.toDouble()
                     )
+                }
+                .also {
+                    println(it)
                 }
         }
     }

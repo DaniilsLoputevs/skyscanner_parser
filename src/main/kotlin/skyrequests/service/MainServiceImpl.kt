@@ -18,8 +18,8 @@ class MainServiceImpl : MainService {
 }
 
 fun main() {
-    val dates = listOf("2021-08-15", "2021-08-16","2021-08-17")
-    val request = BotRequest(dates, "SVO", "LHR", "rub", dates)
+    val dates = listOf("2021-08")
+    val request = BotRequest(dates, "VKO", "KRR", "rub", dates)
     val service = MainServiceImpl()
     val response = service.provideData(request)
     println(response)

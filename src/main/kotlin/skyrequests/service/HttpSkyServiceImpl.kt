@@ -27,7 +27,7 @@ class HttpSkyServiceImpl: HttpSkyService {
             .uri(URI.create(currentURI))
             .build()
         return jackson
-            .readValue(client.send(request, HttpResponse.BodyHandlers.ofString()).body())
+            .readValue<SkyServiceResponse>(client.send(request, HttpResponse.BodyHandlers.ofString()).body())
     }
 }
 
