@@ -3,8 +3,8 @@ package skyrequests.service
 import com.fasterxml.jackson.databind.json.JsonMapper
 import com.fasterxml.jackson.module.kotlin.KotlinModule
 import com.fasterxml.jackson.module.kotlin.readValue
-import skyrequests.models.httpservice.SkyServiceRequest
-import skyrequests.models.httpservice.SkyServiceResponse
+import skyrequests.models.myservice.SkyServiceRequest
+import skyrequests.models.myservice.SkyServiceResponse
 import java.net.URI
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
@@ -22,6 +22,7 @@ class HttpSkyServiceImpl: HttpSkyService {
     override fun findFlyInfo(data: SkyServiceRequest): SkyServiceResponse {
         val currentURI = "$SKYURI/${data.country}/${data.currency}/${data.locale}/${data.from}/${data.to}" +
                 "/${data.startDate}?apiKey=prtl6749387986743898559646983194"
+        println(currentURI)
         val request = HttpRequest
             .newBuilder()
             .uri(URI.create(currentURI))

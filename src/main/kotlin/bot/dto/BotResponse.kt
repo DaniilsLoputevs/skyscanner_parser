@@ -10,20 +10,22 @@ import java.util.*
  * 13 Фунтов(Персона)
  */
 data class BotResponse(
-    val date: Date, // TODO Показывать день недели(Может использовать Типа Calendar)
+    val date: Calendar,
     val from: String,
     val to: String,
     val departTime: String,
     val arriveTime: String,
     val company: String,
-    val price: Double
+    val price: Double,
+    val dir: String
 
 ) {
     override fun toString(): String {
-        return "$date\n" +
+        return "${date.get(Calendar.DAY_OF_WEEK)}\n" +
                 "$from - $to\n" +
                 "$departTime - $arriveTime\n" +
                 "$company\n" +
-                "$price\n"
+                "$price\n" +
+                "$dir\n"
     }
 }

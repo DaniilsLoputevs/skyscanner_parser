@@ -1,7 +1,7 @@
 package skyrequests.service
 
-import skyrequests.models.httpservice.SkyServiceRequest
-import skyrequests.models.httpservice.SkyServiceResponse
+import skyrequests.models.myservice.SkyServiceRequest
+import skyrequests.models.myservice.SkyServiceResponse
 
 interface HttpSkyService {
 

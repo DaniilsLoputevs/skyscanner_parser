@@ -1,4 +1,4 @@
-package skyrequests.models.httpservice.skymodels
+package skyrequests.models.geoservice
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -15,22 +15,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-data class Currencies (
+data class Cities (
 
-	@JsonProperty("Code")
-	val code : String,
-	@JsonProperty("Symbol")
-	val symbol : String,
-	@JsonProperty("ThousandsSeparator")
-	val thousandsSeparator : String,
-	@JsonProperty("DecimalSeparator")
-	val decimalSeparator : String,
-	@JsonProperty("SymbolOnLeft")
-	val symbolOnLeft : Boolean,
-	@JsonProperty("SpaceBetweenAmountAndSymbol")
-	val spaceBetweenAmountAndSymbol : Boolean,
-	@JsonProperty("RoundingCoefficient")
-	val roundingCoefficient : Int,
-	@JsonProperty("DecimalDigits")
-	val decimalDigits : Int
+	@JsonProperty("Id")
+	val id : String,
+	@JsonProperty("Name")
+	val name : String,
+	@JsonProperty("SingleAirportCity")
+	val singleAirportCity : Boolean,
+	@JsonProperty("CountryId")
+	val countryId : String,
+	@JsonProperty("Location")
+	val location : String,
+	@JsonProperty("IataCode")
+	val iataCode : String,
+	@JsonProperty("Airports")
+	val airports : List<Airports>
 )

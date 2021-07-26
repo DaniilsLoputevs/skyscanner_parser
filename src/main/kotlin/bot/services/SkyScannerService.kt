@@ -20,13 +20,14 @@ class SkyScannerServiceImpl : SkyScannerService {
         return ResponsePage(
             responses = listOf(
                 BotResponse(
-                    date = Date("17.06.2021"), // TODO <<= FIX THIS!!!
+                    date = GregorianCalendar().apply { Date() },
                     from = "RIX",
                     to = "STN",
                     departTime = "22:05",
                     arriveTime = "22:45",
                     company = "Ryanair",
-                    price = 0.0
+                    price = 0.0,
+                    dir = "true"
                 )
             )
         )

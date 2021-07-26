@@ -23,7 +23,7 @@ class BotServiceImpl : BotService {
             from = fromAndTo[0],
             to = fromAndTo[1],
             currency = txt[2],
-            options = listOf()
+            options = mapOf()
         )
 
     }

@@ -1,4 +1,4 @@
-package skyrequests.models.httpservice.skymodels
+package skyrequests.models.skyserviceresponse
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -15,16 +15,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-data class HttpResponse (
+data class OutboundLeg (
 
-    @JsonProperty("Quotes")
-    val quotes : List<Quotes>,
-    @JsonProperty("Carriers")
-    val carriers : List<Carriers>,
-    @JsonProperty("Places")
-    val places : List<Places>,
-    @JsonProperty("Currencies")
-    val currencies : List<Currencies>,
-    @JsonProperty("Routes")
-    val routes : List<Routes>
+	@JsonProperty("CarrierIds")
+	val carrierIds : List<Int>,
+	@JsonProperty("OriginId")
+	val originId : Int,
+	@JsonProperty("DestinationId")
+	val destinationId : Int,
+	@JsonProperty("DepartureDate")
+	val departureDate : String
+
 )

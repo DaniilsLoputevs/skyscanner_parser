@@ -1,8 +1,8 @@
-package skyrequests.models.httpservice
+package skyrequests.models.myservice
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
-import skyrequests.models.httpservice.skymodels.*
+import skyrequests.models.skyserviceresponse.*
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class SkyServiceResponse (

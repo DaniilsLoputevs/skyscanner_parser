@@ -5,5 +5,5 @@ data class BotRequest(
     val from: String,
     val to: String,
     val currency : String, // GBP || EUR || RUB
-    val options: List<String>,
+    val options: Map<String, String>,
 )

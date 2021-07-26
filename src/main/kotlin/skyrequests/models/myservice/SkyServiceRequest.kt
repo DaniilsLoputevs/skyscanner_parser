@@ -1,7 +1,4 @@
-package skyrequests.models.httpservice
-
-import java.time.LocalDate
-import javax.swing.text.StyledEditorKit
+package skyrequests.models.myservice
 
 /**
  *

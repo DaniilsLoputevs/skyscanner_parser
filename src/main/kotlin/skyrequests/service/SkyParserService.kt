@@ -1,10 +1,10 @@
 package skyrequests.service
 
 import bot.dto.BotResponse
-import skyrequests.models.httpservice.SkyServiceResponse
+import skyrequests.models.myservice.SkyServiceResponse
 
 interface SkyParserService {
 
-    public fun parseHttpResponse(data: SkyServiceResponse): List<BotResponse>
+    public fun parseHttpResponse(data: SkyServiceResponse, options: Map<String, String> = mapOf()): List<BotResponse>
 
 }

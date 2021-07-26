@@ -2,7 +2,6 @@ package skyrequests.service
 
 import bot.dto.BotRequest
 import bot.dto.BotResponse
-import skyrequests.models.httpservice.SkyServiceRequest
 
 interface MainService {
 

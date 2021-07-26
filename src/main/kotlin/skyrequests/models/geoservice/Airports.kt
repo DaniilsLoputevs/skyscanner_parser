@@ -1,4 +1,4 @@
-package skyrequests.models.httpservice.skymodels
+package skyrequests.models.geoservice
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -15,22 +15,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-data class Places (
+data class Airports (
 
+	@JsonProperty("Id")
+	val id : String,
 	@JsonProperty("Name")
 	val name : String,
-	@JsonProperty("Type")
-	val type : String,
-	@JsonProperty("PlaceId")
-	val placeId : Int,
-	@JsonProperty("IataCode")
-	val iataCode : String,
-	@JsonProperty("SkyscannerCode")
-	val skyscannerCode : String,
-	@JsonProperty("CityName")
-	val cityName : String,
 	@JsonProperty("CityId")
 	val cityId : String,
-	@JsonProperty("CountryName")
-	val countryName : String
+	@JsonProperty("CountryId")
+	val countryId : String,
+	@JsonProperty("Location")
+	val location : String
 )

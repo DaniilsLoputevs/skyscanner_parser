@@ -1,4 +1,4 @@
-package skyrequests.models.httpservice.skymodels
+package skyrequests.models.skyserviceresponse
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -15,10 +15,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-data class Carriers (
+data class Quotes (
 
-	@JsonProperty("CarrierId")
-	val carrierId : Int,
-	@JsonProperty("Name")
-	val name : String
+    @JsonProperty("QuoteId")
+    val quoteId : Int,
+    @JsonProperty("MinPrice")
+    val minPrice : Int,
+    @JsonProperty("Direct")
+    val direct : Boolean,
+    @JsonProperty("OutboundLeg")
+    val outboundLeg : OutboundLeg,
+    @JsonProperty("QuoteDateTime")
+    val quoteDateTime : String
 )
